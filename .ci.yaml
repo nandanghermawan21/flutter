@@ -6,6 +6,7 @@
 # More information at:
 #  * https://github.com/flutter/cocoon/blob/main/CI_YAML.md
 enabled_branches:
+  - flutter-2.8-candidate.3
   - main
   - master
   - flutter-\d+\.\d+-candidate\.\d+
@@ -2644,6 +2645,7 @@ targets:
 
   - name: Mac module_test_ios
     recipe: devicelab/devicelab_drone
+    bringup: true # Flaky https://github.com/flutter/flutter/issues/93517
     timeout: 60
     properties:
       caches: >-
